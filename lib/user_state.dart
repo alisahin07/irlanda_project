@@ -11,6 +11,7 @@ class UserState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
+        //StreamBuilder, kullanıcı tanımlı nesnelerin akışını widget'lara dönüştürebilen bir Widget'tır.   Herhangi bir UI güncellemesi varsa (kullanıcı etkileşiminden veya ağ güncellemelerinden kaynaklanmış olabilir) güncellenen bir Akışınız olduğunu varsayalım. "Ana" widget'ınız akışı dinleyen bir StreamBuilder içeriyorsa, durumlarınızı görünümlere çevirmekten sorumlu öğe olarak işlev görebilir.
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (ctx, userSnapshot) {
           if (userSnapshot.data == null) {

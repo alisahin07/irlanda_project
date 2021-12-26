@@ -24,30 +24,39 @@ class _AllWorkersWidgetState extends State<AllWorkersWidget> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 22,
+      elevation: 25,
       color: Colors.white10,
       margin: EdgeInsets.symmetric(
-        horizontal: 10,
-        vertical: 6,
+        horizontal: 10, //yatay
+        vertical: 6, //dikey
       ),
       child: ListTile(
+        // ListTile tipik olarak bir metnin yanı sıra baştaki veya sondaki bir simgeyi içeren sabit yükseklikte tek satır.
         onTap: () {
           Navigator.pushReplacement(
+              //Adından da anlaşılacağı gibi, açmaya çalıştığınız yeni sayfayı rota yığınındaki mevcut sayfayla değiştirir. Örneğin ikinci sayfadayken pushReplacement() yöntemini kullanın ve üçüncü sayfayı açın, geri tuşuna bastığınızda ilk sayfaya gidecek ve ikinci sayfayı atlayacaksınız.
               context,
               MaterialPageRoute(
+                  //A modal route that replaces the entire screen with a platform-adaptive transition.
                   builder: (context) => ProfileScreen(
                       userID: widget
                           .userID))); // bir Login sayfasından doğru şifre ve kullanıcı adı ile giriş yapıp, yeni bir sayfaya gelen kullanıcının, (zaten giriş yapmış olduğu için) yeniden Login sayfasına gitmesini engellemek isteyebiliriz.İşte bu ve buna benzer durumlar için,Navigator.pushReplacement(…)
         },
-        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        contentPadding: EdgeInsets.symmetric(
+            horizontal: 20, vertical: 10), //	contentPadding=desen iç dolgusu.
         leading: Container(
-          padding: EdgeInsets.only(right: 12),
+          //leading =Başlıktan önce görüntülenecek bir widget.
+          padding: EdgeInsets.only(
+              //EdgeInsets=  Tipik olarak bir kutunun dört tarafının her birinden bir ofset için kullanılır. Örneğin, bir kutunun içindeki dolgu bu sınıf kullanılarak temsil edilebilir. EdgeInsets sınıfı, ofsetleri görsel kenarlar, sol, üst, sağ ve alt olarak belirtir.
+              right: 20), //Dekorasyonun içine yazılacak boş alan.
           decoration: BoxDecoration(
+            //boxDecoration BoxDecoration, Container dediğimiz kutuları şekillendirmeye, boyamaya ve istenilen türde kutu yaratmaya yarayan dekorasyon aracıdır.
             border: Border(
               right: BorderSide(width: 1),
             ),
           ),
           child: CircleAvatar(
+            // circleavatar=Bir kullanıcıyı temsil eden bir daire. Tipik olarak bir kullanıcının profil resmiyle veya böyle bir resmin olmaması durumunda kullanıcının baş harfleriyle birlikte kullanılır.
             backgroundColor: Colors.transparent,
             radius: 20,
             child: Image.network(
@@ -58,7 +67,7 @@ class _AllWorkersWidgetState extends State<AllWorkersWidget> {
           ),
         ),
         title: Text(
-          widget.userName,
+          widget.userName, //
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
           style: TextStyle(
@@ -72,7 +81,7 @@ class _AllWorkersWidgetState extends State<AllWorkersWidget> {
           children: [
             Text(
               'Visit Profile',
-              maxLines: 2,
+              maxLines: 20,
               overflow: TextOverflow.ellipsis,
               style: (TextStyle(
                 color: Colors.grey,
@@ -81,6 +90,7 @@ class _AllWorkersWidgetState extends State<AllWorkersWidget> {
           ],
         ),
         trailing: IconButton(
+          // Başlıktan sonra görüntülenecek bir widget. Tipik olarak bir Icon widget'ı.
           icon: Icon(
             Icons.mail_outline,
             size: 30,
