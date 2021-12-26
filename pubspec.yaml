@@ -29,18 +29,18 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   cached_network_image: ^3.0.0  #İnternetten görüntüleri göstermek ve onları önbellek dizininde tutmak için bir çarpıntı kitaplığı.
-  image_picker: ^0.8.1+3
-  image_cropper: ^1.4.1
+  image_picker: ^0.8.1+3 #Görüntü kitaplığından görüntüler seçmek ve kamerayla yeni fotoğraflar çekmek için iOS ve Android için bir Flutter eklentisi.
+  image_cropper: ^1.4.1 #Android ve iOS için bir Flutter eklentisi, görüntülerin kırpılmasını destekler. Bu eklenti iki farklı yerel kitaplığa dayanmaktadır, bu nedenle bu platformlar arasında farklı kullanıcı arayüzü ile birlikte gelir.
   fluttericon: ^2.0.0
-  url_launcher: ^6.0.9
-  curved_navigation_bar: ^1.0.1
-  uuid: ^3.0.4
-  fluttertoast: ^8.0.7
+  url_launcher: ^6.0.9 #Bir URL başlatmak için bir Flutter eklentisi. iOS, Android, web, Windows, macOS ve Linux'u destekler.
+  curved_navigation_bar: ^1.0.1 #Kavisli gezinme çubuğunun kolay uygulanması için bir Flutter paketi.
+  uuid: ^3.0.4  #uniqe deger olusturan ozellik
+  fluttertoast: ^8.0.7 #kullanici eklendi kayit basarili oldu gibi mesajları gösteren özellik.
 
-  firebase_auth: ^3.0.1
-  firebase_core: ^1.4.0
-  cloud_firestore: ^2.4.0
-  firebase_storage: ^10.0.1
+  firebase_auth: ^3.0.1 #Firebase Authentication, uygulamanızda kullanıcıların kimliğini doğrulamak için arka uç hizmetleri ve kullanımı kolay SDK'lar sağlar. Parolalar, telefon numaraları, Google, Facebook ve Twitter gibi popüler birleşik kimlik sağlayıcıları ve daha fazlasını kullanarak kimlik doğrulamayı destekler.
+  firebase_core: ^1.4.0 #Firebase_core eklentisi, Flutter uygulamanızı Firebase projenize bağlamaktan sorumludur. Eklenti, başka herhangi bir FlutterFire eklentisi kullanılmadan önce kurulmalı ve başlatılmalıdır.
+  cloud_firestore: ^2.4.0 #Cloud Firestore, mobil ve web uygulamalarınız için verileri küresel ölçekte kolayca depolamanıza, senkronize etmenize ve sorgulamanıza olanak tanıyan bir NoSQL belge veritabanıdır.
+  firebase_storage: ^10.0.1 #Cloud Storage, fotoğraflar ve videolar gibi kullanıcı tarafından oluşturulan içeriği hızlı ve kolay bir şekilde depolamanıza ve sunmanıza yardımcı olmak için tasarlanmıştır.
 
 dev_dependencies:
   flutter_test:
