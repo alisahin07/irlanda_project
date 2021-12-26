@@ -6,3 +6,4 @@ String loginUrlImage =
 String signUpUrlImage =
     "https://upload.wikimedia.org/wikipedia/commons/f/f7/LinkedIn_Headquarters_Mountain_View.jpg"; //burasi ana ekranda animasyon olan yerler
 String deli = "";
+String lale = "";
